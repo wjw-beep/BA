@@ -1,0 +1,21 @@
+protocol:
+  retention_probability: 0.5
+  probes: 32
+  master_seed: 2026
+  namespace: causalquery-v1
+inference:
+  influence_probability: 0.5
+  influence_cutoff: 0.05
+  smoothing_grid: [0.005, 0.01, 0.025, 0.05, 0.1]
+  regularization_C: 1.0
+  max_iter: 2000
+  threshold_grid: [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95]
+  confidence_alpha: 0.05
+  assume_noninformative_missingness: false
+ranking:
+  lambda_penalty: 0.4
+  evidence_budget: 4
+  unknown_pair_penalty: 0.5
+oracle:
+  max_exact_origins: 15
+  monte_carlo_samples: 10000
